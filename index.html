@@ -196,19 +196,24 @@ footer{padding:40px 0;border-top:1px solid var(--border)}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
-  .hero-content{grid-template-columns:1fr}
-  .hero-avatar{display:none}
+  .hero-content{grid-template-columns:1fr; text-align: center; gap: 40px;}
+  .hero-avatar{order: -1; margin: 0 auto; width: 200px; height: 200px;}
+  .avatar-hint{width: 150px; height: 140px; }
+  .hero-bio{margin: 1.5rem auto;}
+  .hero-cta, .hero-stats{justify-content: center;}
   .about-grid,.skills-grid,.contact-grid{grid-template-columns:1fr}
 }
 @media(max-width:768px){
   .nav-links,.btn-resume{display:none}
-  .hamburger{display:flex}
-  section{padding:70px 0}
+  .hamburger{display:flex;}
+  section{padding:60px 0;}
   .projects-grid,.cert-grid{grid-template-columns:1fr}
+  .hero-title{font-size: 2.5rem;}
 }
 @media(max-width:480px){
-  .hero-cta{flex-direction:column}
-  .hero-stats{gap:20px}
+  .hero-cta{flex-direction:column; width: 100%;}
+  .btn-primary, .btn-secondary{width: 100%; justify-content: center;}
+  .hero-stats{gap:15px; flex-wrap: wrap; justify-content: center;}
   .strengths-grid{grid-template-columns:1fr}
 }
 </style>
