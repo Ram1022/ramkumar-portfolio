@@ -25,7 +25,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.7;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
-.container{max-width:1140px;margin:0 auto;padding:0 24px}
+.container{max-width:1140px;margin:0 auto;padding:0 20px;overflow: hidden;}
 
 /* NAVBAR */
 #navbar{position:fixed;top:0;left:0;right:0;z-index:1000;transition:transform 0.4s ease,background 0.3s ease}
@@ -89,7 +89,7 @@ a{color:inherit;text-decoration:none}
 /* SECTIONS */
 section{padding:100px 0}
 .section-label{font-family:var(--font-mono);font-size:0.8rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem}
-.section-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1.5rem}
+.section-title{font-family:var(--font-display);font-size:clamp(2rem,8vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.2;margin-bottom:1.5rem; word-wrap: break-word;}
 .section-title span{color:var(--accent)}
 .section-sub{color:var(--text2);font-size:1rem;max-width:520px;line-height:1.8}
 
@@ -147,7 +147,7 @@ section{padding:100px 0}
 /* CERTIFICATIONS */
 #certifications{background:var(--bg2)}
 .cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin-top:48px}
-.cert-card{padding:22px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);transition:all var(--transition);display:flex;gap:16px;align-items:flex-start}
+.cert-card{padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);transition:all var(--transition);display:flex;gap:16px;align-items:flex-start;width: 100%;box-sizing: border-box;}
 .cert-card:hover{border-color:var(--border-hover);transform:translateY(-4px)}
 .cert-icon{width:46px;height:46px;border-radius:12px;background:var(--accent-dim);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.1rem;flex-shrink:0}
 .cert-title{font-family:var(--font-display);font-weight:700;font-size:0.9rem;margin-bottom:6px}
@@ -217,6 +217,8 @@ footer{padding:40px 0;border-top:1px solid var(--border)}
   .hero-title{font-size: 1.8rem;}
   .hero-stats{gap:15px; display: grid; grid-template-columns: 1fr 1fr; flex-wrap: wrap; justify-content: center;}
   .strengths-grid{grid-template-columns:1fr}
+  .cert-card{flex-direction: column; align-items: center; text-align: center;}
+  .cert-icon{margin-bottom: 10px;}
 }
 </style>
 </head>
@@ -571,7 +573,7 @@ footer{padding:40px 0;border-top:1px solid var(--border)}
 
 <script>
 // TYPING ANIMATION
-const roles=["Web Developer","Data Visualizer","MCA Student","Former Professor","Problem Solver"];
+const roles=["Former Professor","Web Developer","Data Analyst","AI-Driven Web Developer"];
 let ri=0,ci=0,del=false;
 const typed=document.getElementById("typed-text");
 function type(){
